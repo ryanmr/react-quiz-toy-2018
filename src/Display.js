@@ -70,7 +70,17 @@ class Display extends React.Component {
       await delay(4 * 1000);
 
       await this.answer(Spring, {
-        to: { backgroundColor: "#fff" }
+        from: {
+          backgroundColor: "#6154d8",
+          color: "#ececec",
+          border: "5px solid rgba(255,255,255,0)"
+        },
+        to: {
+          backgroundColor: "#4732ff",
+          color: "#fff",
+          border: "5px solid rgba(255,255,255,1)"
+        },
+        config: config.slow
       });
 
       await delay(4 * 1000);
@@ -111,30 +121,31 @@ class Display extends React.Component {
                 if (answer) {
                   console.log("trying to show answer");
                   return (
-                    <animated.div
-                      className="item"
-                      style={{
-                        transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
-                        ...props
+                    // <animated.div
+                    //   className="item"
+                    //   style={{
+                    //     transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
+                    //     ...props
+                    //   }}
+                    // >
+                    <Keyframes native script={next => (this.answer = next)}>
+                      {({ ...answerProps }) => {
+                        return (
+                          <animated.div
+                            className="item"
+                            style={{
+                              transform: x.interpolate(
+                                x => `translate3d(${x}%,0,0)`
+                              ),
+                              ...answerProps
+                            }}
+                          >
+                            {item.value}
+                          </animated.div>
+                        );
                       }}
-                    >
-                      <Keyframes native script={next => (this.answer = next)}>
-                        {({ color, ...answerProps }) => {
-                          return (
-                            <animated.div
-                              style={{
-                                transform: x.interpolate(
-                                  x => `translate3d(${x}%,0,0)`
-                                ),
-                                ...answerProps
-                              }}
-                            >
-                              {item.value}
-                            </animated.div>
-                          );
-                        }}
-                      </Keyframes>
-                    </animated.div>
+                    </Keyframes>
+                    // </animated.div>
                   );
                 }
                 return (
