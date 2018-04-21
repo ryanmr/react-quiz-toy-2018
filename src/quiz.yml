@@ -1,0 +1,105 @@
+quiz:
+  questions:
+    - prompt: What game do Chris and Joel play?
+      answer: Ingress
+      options:
+        - Candy Crush
+        - Pokemon Go
+        - 2048    
+    - prompt: Where is Joel from?
+      answer: Texas
+      options:
+        - New Mexico
+        - New York
+        - Massachusetts
+    - prompt: Where would Chris and Joel like to travel?
+      answer: Yellowstone
+      options:
+        - Grand Canyon
+        - Yucatan Peninsula
+        - Mt Kilimanjaro        
+    - prompt: What is the first car Chris and Joel bought together?
+      answer: 2003 Mazda Protege 
+      options:
+        - 2010 Mazda 3
+        - 2004 Honda CRV
+        - 2012 Jeep
+    - prompt: How many kids does Joel have?
+      answer: 3
+      options:
+        - 2
+        - 1
+        - 4
+    - prompt: How many kids does Chris have?
+      answer: 1
+      options:
+        - 3
+        - 0
+        - 8
+    - prompt: What fruit does Joel dislike?
+      answer: Bananas
+      options:
+        - Apples
+        - Oranges
+        - Pears
+    - prompt: What fruit does Joel dislike?
+      answer: Bananas
+      options:
+        - Apples
+        - Oranges
+        - Pears
+    - prompt: What fruit does Chris dislike?
+      answer: Blueberries
+      options:
+        - Strawberries
+        - Oranges
+        - Pears
+    - prompt: What musical instrument does Chris play?
+      answer: None
+      options:
+        - Guitar
+        - Keyboard
+        - Chimes
+    - prompt: Where was Chris and Joel's first date?
+      answer: Ruby Tuesday
+      options:
+        - Chili's
+        - 5 Guys
+        - Erbert & Gerbert's
+    - prompt: Where did Joel propose to Chris?
+      answer: Stone Arch Bridge
+      options:
+        - IDS Crystal Court
+        - Newell Park
+        - Hudson Park
+    - prompt: How long was Chris and Joel's engagement?
+      answer: 5 1/2 months
+      options:
+        - 7 months
+        - 13 months
+        - 10 1/2 months
+    - prompt: How much does the average wedding in Minnesota cost?
+      answer: $19k
+      options:
+        - $7k
+        - $35k
+        - $10k
+    - prompt: The most sought after wedding month is?
+      answer: May
+      options:
+        - November
+        - August
+        - July
+    - prompt: Where is Chris and Joel's new house?
+      answer: Hudson
+      options:
+        - Stillwater
+        - River Falls
+        - Minneapolis
+    - prompt: Where is Chris and Joel's new house?
+      answer: Hudson
+      options:
+        - Stillwater
+        - River Falls
+        - Minneapolis
+        
