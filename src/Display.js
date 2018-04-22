@@ -65,7 +65,7 @@ class Display extends React.Component {
         from: { x: -120, opacity: 0 },
         to: { x: 0, opacity: 1 }
       });
-
+      await delay(100);
       await this.answer(Spring, {
         immediate: true,
         to: { opacity: 1 }
@@ -89,7 +89,7 @@ class Display extends React.Component {
 
       await delay(4 * 1000);
 
-      this.content(Trail, { to: { x: -120, opacity: 0 } });
+      await this.content(Trail, { to: { x: -120, opacity: 0 } });
 
       await this.container(Spring, { to: { x: -100 }, config: config.slow });
     }
@@ -123,15 +123,7 @@ class Display extends React.Component {
               {this.state.items.map(item => ({ x, ...props }) => {
                 const { answer } = item;
                 if (answer) {
-                  console.log("trying to show answer");
                   return (
-                    // <animated.div
-                    //   className="item"
-                    //   style={{
-                    //     transform: x.interpolate(x => `translate3d(${x}%,0,0)`),
-                    //     ...props
-                    //   }}
-                    // >
                     <Keyframes native script={next => (this.answer = next)}>
                       {({ ...answerProps }) => {
                         return (
@@ -149,7 +141,6 @@ class Display extends React.Component {
                         );
                       }}
                     </Keyframes>
-                    // </animated.div>
                   );
                 }
                 return (
