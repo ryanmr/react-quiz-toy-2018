@@ -8,6 +8,7 @@ import {
   config
 } from "react-spring";
 import delay from "delay";
+import _ from "lodash";
 
 class Display extends React.Component {
   state = {
@@ -37,10 +38,13 @@ class Display extends React.Component {
         v.toString = () => v.value;
         return v;
       });
+      const shuffledItems = _.shuffle(items);
       console.log(items);
-      // const items = [...quizlet.options, quizlet.answer];
 
-      this.setState({ revealAnswer: false, prompt: quizlet.prompt, items });
+      this.setState({
+        prompt: quizlet.prompt,
+        items: shuffledItems
+      });
 
       // set state will cause an render update
       // but it will cause the animation to jitter
